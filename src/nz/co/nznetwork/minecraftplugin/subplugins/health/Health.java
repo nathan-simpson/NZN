@@ -54,7 +54,7 @@ public class Health implements NZNSubplugin, CommandExecutor, CountdownListener 
 			sender.sendMessage(plugin.getUtils().ERROR_COLOR+"Only players can use /heal on themselves");
 			return true;
 		}
-		if(args.length != 0 && !sender.hasPermission("nzn.health.heal.target")) { //check they have permission
+		if(args.length != 0 && !plugin.getUtils().getPermision(sender, "nzn.health.heal.target")) { //check they have permission
 			sender.sendMessage(plugin.getUtils().ERROR_COLOR+"Incorrect format, use: /heal");
 			return true;
 		}
@@ -75,7 +75,7 @@ public class Health implements NZNSubplugin, CommandExecutor, CountdownListener 
 		Long lastHeal = recentHeals.get(sender.getName());
 		if(lastHeal != null) {
 			if((System.currentTimeMillis()-lastHeal) < plugin.getConfig().getLong("nzn.health.heal.cooldown") &&
-					!sender.hasPermission("nzn.health.heal.instant")) {
+					!plugin.getUtils().getPermision(sender, "nzn.health.heal.instant")) {
 				sender.sendMessage(ChatColor.DARK_GREEN+"Heal "+ChatColor.WHITE+"is still on cooldown"); //non-standard error message
 				return true;
 			}
@@ -100,7 +100,7 @@ public class Health implements NZNSubplugin, CommandExecutor, CountdownListener 
 			sender.sendMessage(plugin.getUtils().ERROR_COLOR+"Only players can use /god on themselves");
 			return true;
 		}
-		if(args.length != 0 && !sender.hasPermission("nzn.health.god.target")) { //check they have permission
+		if(args.length != 0 && !plugin.getUtils().getPermision(sender, "nzn.health.god.target")) { //check they have permission
 			sender.sendMessage(plugin.getUtils().ERROR_COLOR+"Incorrect format, use: /god");
 			return true;
 		}
@@ -122,7 +122,7 @@ public class Health implements NZNSubplugin, CommandExecutor, CountdownListener 
 		Long lastGod = recentGods.get(sender.getName());
 		if(lastGod != null) {
 			if((System.currentTimeMillis()-lastGod) < plugin.getConfig().getLong("nzn.health.god.cooldown") &&
-					!sender.hasPermission("nzn.health.god.instant")) {
+					!plugin.getUtils().getPermision(sender, "nzn.health.god.instant")) {
 				sender.sendMessage(ChatColor.DARK_GREEN+"GodMode "+ChatColor.DARK_RED+"is still on cooldown");
 				return true;
 			}

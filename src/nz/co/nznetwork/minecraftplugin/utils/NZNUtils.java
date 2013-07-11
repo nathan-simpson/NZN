@@ -1,6 +1,7 @@
 package nz.co.nznetwork.minecraftplugin.utils;
 
 import org.bukkit.ChatColor;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import nz.co.nznetwork.minecraftplugin.NZNPlugin;
@@ -170,9 +171,9 @@ public class NZNUtils {
 		}
 	}
 	
-	public boolean getPermision(Player p, String permission) {
-    	if(p.isOp()) return true;
-    	if(p.hasPermission(permission)) return true;
+	public boolean getPermision(CommandSender sender, String permission) {
+    	if(sender.isOp()) return true;
+    	if(sender.hasPermission(permission)) return true;
     	String[] hirechy = permission.split(".");
     	for(int i = 0; i < hirechy.length; i++) {
     		String permBuilder = "";
@@ -180,7 +181,7 @@ public class NZNUtils {
     			permBuilder = permBuilder+hirechy[j]+".";
     		}
     		permBuilder = permBuilder+"*";
-    		if(p.hasPermission(permBuilder)) return true;
+    		if(sender.hasPermission(permBuilder)) return true;
     	}
     	return false;
     }
