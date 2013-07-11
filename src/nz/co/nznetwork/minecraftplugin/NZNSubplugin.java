@@ -5,7 +5,7 @@ package nz.co.nznetwork.minecraftplugin;
  * @website www.nznetwork.co.nz
  */
 public interface NZNSubplugin {
-	public void onEnable(NZNPlugin masterPlugin);
+	public void onEnable(NZNPlugin masterPlugin); //we could remove this method and aggree it is the constructor of the subplugin
 	public void onDisable();
 	public void reloadConfig();
 }

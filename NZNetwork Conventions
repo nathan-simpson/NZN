@@ -1,0 +1,32 @@
+Things that should be followed plugin wide:
+
+Commands with arguments:
+	[complusry argument]
+	<optional argument>
+	
+When reporting that a player cannot be found the player always has a name color of ChatColor.YELLOW
+
+Errors are plugin.getUtils().ERROR_COLOR
+
+whenever calling a commad on another player that player is called a target in the permission file
+
+all commands always return true (even if an error occurs) and send their own error messages
+
+
+
+
+current list of used perms:
+nzn.gm.self
+nzn.gm.target
+nzn.health.heal
+nzn.health.god
+nzn.health.heal.instant
+nzn.health.god.instant
+nzn.health.heal.target
+nzn.health.god.target
+
+
+current list of used config:
+nzn.health.heal.cooldown
+nzn.health.god.cooldown
+nzn.health.god.duration
