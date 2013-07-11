@@ -2,6 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  * test edit by andrew
+ * test edit from andrew from eclipse
  */
 package nz.co.nznetwork.MinecraftPlugin;
 
