@@ -1,0 +1,85 @@
+Plugins:
+    Ban: true
+    ButtonEvent: false
+    CastleWars: false
+    ChatLog: false
+    ChatStyle: true
+    CheckPlayer: true
+    ClearInventory: true
+    Daylight: true
+    DeathMessage: true
+    GameMode: true
+    Health: true
+    Item: true
+    JoinLeaveMessage: true
+    Kit: true
+    Level: true
+    MostOnline: true
+    Motd: true
+    NoCaps: true
+    OnlinePlayers: true
+    OnlineWebsite: true
+    Ping: true
+    PMS: true
+    Position: true
+    Signups: true
+    SStop: true
+    TP: true
+    World: true
+
+Commands:
+    Ban:
+        ban: ban
+        tempban: tempban
+        checkban: checkban
+        unban: unban
+        kick: kick
+    ButtonEvent:
+        selectbutton: selectbutton
+    ChatLog:
+        chatlog: chatlog
+    ChatStyle:
+        me: me
+    ClearInventory:
+        clear: clear
+    DayLight:
+        day: day
+        night: night
+        dawn: dawn
+        dusk: dusk
+    GameMode:
+        gamemode: gm
+    Item:
+        item:
+            - item
+            - i
+        give: give
+    Health:
+        heal: heal
+        god: god
+    Kit:
+        kit: kit
+    MostOnline:
+        mostonline: mostonline
+    Motd:
+        motd: motd
+    OnlinePlayers:
+        onlineplayers: who
+    Ping:
+        ping: ping
+    PlayerLevel:
+        level: level
+    PMS:
+        pms: pms
+        reply: r
+    Position:
+        position: pos
+    SStop:
+        sstop: sstop
+    TP:
+        tp: tp
+        tphere: tphere
+    World:
+        world: world
+    NZnetwork:
+        nznetwork: nznetwork
