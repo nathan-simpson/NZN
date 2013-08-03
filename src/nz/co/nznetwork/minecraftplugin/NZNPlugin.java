@@ -1,5 +1,5 @@
 package nz.co.nznetwork.minecraftplugin;
-
+//andrew uni test
 import java.io.File;
 import java.util.ArrayList;
 
@@ -17,15 +17,15 @@ import org.bukkit.plugin.java.JavaPlugin;
  * @website www.nznetwork.co.nz
  */
 public class NZNPlugin extends JavaPlugin {
-    
+
     private ArrayList<NZNSubplugin> loadedSubPlugins;
     private NZNDatabase database;
     private NZNUtils utils;
-    
+
     //chatformat is a subplugin and behaves like one but it has methods used bu other plugins
     //so it is here so that other plugins can access it;
     private ChatFormat chatFormat;
-    
+
     @Override
     public void onEnable(){
         //read config
@@ -36,7 +36,7 @@ public class NZNPlugin extends JavaPlugin {
     	utils = new NZNUtils(this);
     	chatFormat = new ChatFormat(this);
     	loadedSubPlugins.add(chatFormat);
-    	
+
     	//create subplugins (the ones enabled in config) and add them to array
     	//assign commands and events to subplugins
     	//call on onEnable() on each subplugin OR you could create all plugins and only call onEnable to the enabled ones
@@ -58,7 +58,7 @@ public class NZNPlugin extends JavaPlugin {
     		p.reloadConfig();
     	}
     }
-    
+
     /**
      * Gets a custom config from a filename
      * If a subplugin wants to use the default config it calls getConfig() with no arguments
@@ -70,7 +70,7 @@ public class NZNPlugin extends JavaPlugin {
     	}
     	return YamlConfiguration.loadConfiguration(configFile);
     }
-    
+
     public NZNUtils getUtils() { return utils; }
     public NZNDatabase getNZNDatabase() {return database;}
     public ChatFormat getChatFormat() { return chatFormat; }
